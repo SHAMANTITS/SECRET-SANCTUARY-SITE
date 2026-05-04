@@ -1,42 +1,70 @@
+const CALENDLY_URL =
+  "https://calendly.com/thesecret-sanctuary/root-cause-reset-discovery-call";
+const WHATSAPP_URL = "https://wa.me/60198888986";
+
 export default function FinalCTA() {
   return (
     <section id="contact" className="bg-forest py-28 lg:py-40">
       <div className="max-w-3xl mx-auto px-6 text-center">
+        {/* Closing quote — final emotional hook before CTA */}
+        <figure className="mb-16">
+          <blockquote>
+            <p className="font-serif text-cream/90 text-xl lg:text-2xl italic leading-relaxed">
+              &ldquo;You don&rsquo;t know until you experience it.&rdquo;
+            </p>
+          </blockquote>
+          <figcaption className="mt-4 flex items-center justify-center gap-3 text-sage-light/80 text-xs uppercase tracking-[0.22em]">
+            <span className="block w-6 h-px bg-sage/60" aria-hidden="true" />
+            Anitya Mantits
+            <span className="block w-6 h-px bg-sage/60" aria-hidden="true" />
+          </figcaption>
+        </figure>
+
         <p className="text-sage text-xs uppercase tracking-[0.2em] mb-6">
-          Take the first step
+          Begin
         </p>
         <h2 className="font-serif text-cream text-4xl lg:text-6xl leading-tight mb-8">
-          You don't have to figure this out alone.
+          Start with one quiet stay,
+          <br className="hidden sm:inline" />{" "}
+          or one honest conversation.
         </h2>
         <p className="text-sage-light text-lg leading-relaxed mb-12 max-w-xl mx-auto">
-          A Discovery Call is a conversation — not a commitment. Speak with Cyril,
-          share where you are, and find out whether The Secret Sanctuary is the
-          right next step for you.
+          Whether you&apos;re thinking about a staycation, a 1:1 online
+          session, or a deeper retreat — start by reaching out. No commitment,
+          no pressure.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="https://calendly.com/thesecret-sanctuary"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center bg-cream text-forest px-8 py-4 rounded-full text-sm font-medium hover:bg-sand transition-colors w-full sm:w-auto"
           >
-            Book a Discovery Call
+            Book Your Stay · From RM150 / Night
           </a>
           <a
-            href="https://wa.me/60198888986"
+            href={CALENDLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 border border-sage text-cream px-8 py-4 rounded-full text-sm font-medium hover:bg-forest-dark transition-colors w-full sm:w-auto"
+            className="inline-flex items-center justify-center border border-sage text-cream px-8 py-4 rounded-full text-sm font-medium hover:bg-forest-dark transition-colors w-full sm:w-auto"
+          >
+            Talk to Cyril Online
+          </a>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 text-sage-light hover:text-cream px-4 py-4 text-sm font-medium transition-colors w-full sm:w-auto"
           >
             <WhatsAppIcon />
-            Message on WhatsApp
+            WhatsApp
           </a>
         </div>
 
-        <p className="mt-12 text-sage/60 text-xs">
-          Most guests travel internationally. We're happy to answer any questions
-          before you commit to anything.
+        <p className="mt-12 text-sage/50 text-xs">
+          Most guests travel internationally. Happy to answer any questions
+          before you decide.
         </p>
       </div>
     </section>

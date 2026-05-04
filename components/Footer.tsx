@@ -1,10 +1,12 @@
 const navLinks = [
-  { label: "Offerings", href: "#offerings" },
-  { label: "Who It's For", href: "#who-its-for" },
-  { label: "Why Us", href: "#why-us" },
+  { label: "Stay", href: "#offerings" },
+  { label: "The Sanctuary", href: "#sanctuary" },
+  { label: "Shrine", href: "#shrine" },
+  { label: "A Day Here", href: "#a-day-here" },
+  { label: "Why Here", href: "#why-us" },
+  { label: "Book", href: "#book" },
   { label: "Meet Cyril", href: "#meet-cyril" },
-  { label: "Process", href: "#process" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Footer() {
@@ -13,13 +15,21 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-12 pb-12 border-b border-bark-light/30">
           <div>
-            <p className="font-serif text-cream text-lg mb-3">
-              The Secret Sanctuary
-            </p>
+            <div className="flex items-center gap-2.5 mb-3">
+              <span
+                className="text-sage text-xl leading-none font-serif"
+                aria-hidden="true"
+              >
+                念
+              </span>
+              <p className="font-serif text-cream text-lg leading-none">
+                The Secret Sanctuary
+              </p>
+            </div>
             <p className="text-mist text-sm leading-relaxed">
-              Root-cause healing in a place built for deep reset.
+              A private garden sanctuary in Sarawak, Borneo.
               <br />
-              Sarawak, Borneo.
+              Built and tended over 30 years.
             </p>
           </div>
 
@@ -27,7 +37,7 @@ export default function Footer() {
             <p className="text-mist text-xs uppercase tracking-widest mb-5">
               Navigation
             </p>
-            <nav className="flex flex-col gap-3">
+            <nav className="grid grid-cols-2 gap-x-6 gap-y-3">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
@@ -46,7 +56,7 @@ export default function Footer() {
             </p>
             <div className="flex flex-col gap-3">
               <a
-                href="https://calendly.com/thesecret-sanctuary"
+                href="https://calendly.com/thesecret-sanctuary/root-cause-reset-discovery-call"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-mist/70 text-sm hover:text-cream transition-colors"
@@ -65,7 +75,7 @@ export default function Footer() {
 
             <div className="mt-8">
               <a
-                href="https://calendly.com/thesecret-sanctuary"
+                href="https://calendly.com/thesecret-sanctuary/root-cause-reset-discovery-call"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-forest text-cream px-6 py-3 rounded-full text-sm font-medium hover:bg-forest-dark transition-colors"

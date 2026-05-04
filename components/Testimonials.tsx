@@ -3,7 +3,7 @@ export default function Testimonials() {
     <section id="testimonials" className="bg-cream py-24 lg:py-32">
       <div className="max-w-6xl mx-auto px-6">
         <p className="text-mist text-xs uppercase tracking-[0.2em] mb-16 text-center">
-          A client's experience
+          A guest&apos;s reflection
         </p>
 
         <div className="max-w-3xl mx-auto">
@@ -18,11 +18,9 @@ export default function Testimonials() {
 
             <blockquote className="relative z-10 pt-8">
               <p className="font-serif text-bark text-2xl lg:text-3xl leading-relaxed mb-10">
-                After more than 20 years of depression, medication, and psychiatric
-                care, Cyril was the first person who truly listened and helped me
-                understand the deeper root of what I was going through. Within weeks
-                I noticed change. Today I feel calmer, more stable, and more at
-                peace.
+                Thirty years of care can be felt the moment you arrive. The
+                Secret Sanctuary is not just a place to stay — it is a place
+                that has been lived, grown, and held with heart.
               </p>
 
               <footer className="flex items-center gap-4">
@@ -30,7 +28,7 @@ export default function Testimonials() {
                 <div>
                   <p className="text-bark font-medium text-sm">Pat</p>
                   <p className="text-mist text-xs mt-0.5">
-                    20+ years of depression & psychiatric care
+                    Long-time guest
                   </p>
                 </div>
               </footer>

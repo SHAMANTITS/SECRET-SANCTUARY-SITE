@@ -13,9 +13,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "The Secret Sanctuary — Healing Retreat in Sarawak, Borneo",
+  title: "The Secret Sanctuary Sarawak | Private Nature Retreat & Creative Reset",
   description:
-    "Root-cause healing in a place built for deep reset. A private sanctuary in Borneo offering detox intensives, nervous system repair, breathwork, and personalized guidance.",
+    "A quiet mountain sanctuary in Sarawak, Borneo for private retreats, creative renewal, emotional reset, nature connection, and guided discovery.",
 };
 
 export default function RootLayout({

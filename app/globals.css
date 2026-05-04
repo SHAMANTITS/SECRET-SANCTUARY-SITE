@@ -19,6 +19,15 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes slowZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.12); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-zoom { animation: none !important; }
+}
+
 body {
   background-color: #FBF8F3;
   color: #3D3026;

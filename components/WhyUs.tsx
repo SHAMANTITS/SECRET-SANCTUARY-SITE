@@ -1,27 +1,27 @@
 const pillars = [
   {
     number: "01",
-    title: "Root-cause, not symptom management",
+    title: "A living sanctuary, not a hotel",
     description:
-      "We don't mask what's happening in your body. Every element of your stay is oriented toward understanding and addressing underlying causes — not temporary relief.",
+      "Built and tended by hand over 30 years. Every path, garden, pool, and pavilion has been shaped slowly. The place itself is the experience.",
   },
   {
     number: "02",
-    title: "Truly personalized",
+    title: "Garden, water, and silence",
     description:
-      "No group retreats, no generic protocols. Your program is built around your specific history, physiology, and goals — and adjusted as you respond.",
+      "Surrounded by herbs, fruit trees, water, and rainforest. Real silence, real food from the land — not curated wellness theater.",
   },
   {
     number: "03",
-    title: "Set in nature, away from noise",
+    title: "Private and intimate",
     description:
-      "Sarawak, Borneo is one of the oldest rainforests on Earth. The environment itself is part of the medicine — genuinely quiet, genuinely clean, genuinely alive.",
+      "Not a mass retreat center. Small, personal, and quiet. You won't share the space with a hundred strangers — most stays are private or in very small groups.",
   },
   {
     number: "04",
-    title: "Sustained support",
+    title: "Personal care, not a program",
     description:
-      "The work doesn't end when you leave. Guidance, integration support, and clear next steps ensure that what you gain here continues to work for you at home.",
+      "No fixed timetable, no packaged protocol. Your stay is shaped around what you actually need — rest, creative space, deep guidance, or simply time off the grid.",
   },
 ];
 
@@ -31,14 +31,15 @@ export default function WhyUs() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-xl mb-16">
           <p className="text-sage text-xs uppercase tracking-[0.2em] mb-4">
-            Why The Secret Sanctuary
+            Why Here
           </p>
           <h2 className="font-serif text-cream text-4xl lg:text-5xl leading-tight">
-            A different kind of healing.
+            What else is possible?
           </h2>
           <p className="mt-5 text-sage-light leading-relaxed">
-            There are many retreats. Very few offer this level of depth,
-            personalization, and genuine commitment to lasting change.
+            Being aware that the question can change the energy of any
+            situation. You begin to see that it is always a question that has
+            opened up a different possibility.
           </p>
         </div>
 

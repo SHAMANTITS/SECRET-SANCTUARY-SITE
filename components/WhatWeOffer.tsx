@@ -1,39 +1,36 @@
-const offerings = [
+import Image from "next/image";
+
+const CALENDLY_URL =
+  "https://calendly.com/thesecret-sanctuary/root-cause-reset-discovery-call";
+const WHATSAPP_URL = "https://wa.me/60198888986";
+
+const pathways = [
   {
-    icon: "◈",
-    title: "Deep Reset Intensives",
+    title: "Staycation",
+    image: "/cozy_tropical_inspired_villa_interior.png",
+    imageAlt: "Cozy tropical-inspired villa interior",
     description:
-      "Structured multi-day programs designed to interrupt chronic patterns — physical, mental, and energetic — and restore baseline function.",
+      "A quiet nature-based stay for travelers, couples, friends, or locals who want rest, privacy, simple food, water, garden atmosphere, and a break from the noise.",
+    price: "From RM150 / night",
+    cta: { label: "Book Your Stay", href: WHATSAPP_URL, primary: true },
   },
   {
-    icon: "◎",
-    title: "Nervous System Repair",
+    title: "1:1 Online",
+    image: "/rustic_retreat_entrance_with_wooden_signs.png",
+    imageAlt: "Welcoming retreat entrance with wooden signs",
     description:
-      "Evidence-informed support for a dysregulated nervous system. Practical tools to move out of fight-flight-freeze and into genuine regulation.",
+      "Start with a private online conversation with Cyril to explore what you need, whether it is clarity, emotional reset, nervous system support, or a personalized retreat plan.",
+    price: null,
+    cta: { label: "Talk to Cyril Online", href: CALENDLY_URL, primary: false },
   },
   {
-    icon: "○",
-    title: "Breathwork & Meditation",
+    title: "Art + Nervous System Reset",
+    image: "/tropical_waterfall_bliss_with_serenity.png",
+    imageAlt: "Waterfall and water at the sanctuary",
     description:
-      "Daily practices tailored to your state and goals. Not performative wellness — applied techniques that shift your physiology in real time.",
-  },
-  {
-    icon: "◇",
-    title: "Detox Programs",
-    description:
-      "Guided detoxification that addresses root causes of inflammation and toxic load. Supervised, personalized, and grounded in physiology.",
-  },
-  {
-    icon: "◉",
-    title: "Personalized Guidance",
-    description:
-      "One-on-one sessions with Cyril to identify what is truly driving your symptoms and co-create a path forward that fits your life.",
-  },
-  {
-    icon: "△",
-    title: "Rest & Restoration",
-    description:
-      "Unstructured time in a quiet, natural environment. Sometimes the most healing thing is simply to stop — fully and without guilt.",
+      "A private or small-group retreat for writing, music, art, movement, rest, regulation, and reconnecting with your authentic expression.",
+    price: null,
+    cta: { label: "Plan Your Retreat", href: WHATSAPP_URL, primary: false },
   },
 ];
 
@@ -43,28 +40,57 @@ export default function WhatWeOffer() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="max-w-xl mb-16">
           <p className="text-mist text-xs uppercase tracking-[0.2em] mb-4">
-            What We Offer
+            Three Ways To Come
           </p>
           <h2 className="font-serif text-bark text-4xl lg:text-5xl leading-tight">
-            Support that goes to the root.
+            Choose your sanctuary experience.
           </h2>
           <p className="mt-5 text-bark-light leading-relaxed">
-            Each offering is designed to address underlying causes, not manage
-            symptoms. Together, they form a complete environment for deep healing.
+            Pick what fits where you are now — or message us and we&apos;ll help
+            you decide.
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {offerings.map((item) => (
+          {pathways.map((p) => (
             <div
-              key={item.title}
-              className="bg-cream rounded-2xl p-8 border border-sand hover:border-sage-light transition-colors"
+              key={p.title}
+              className="bg-cream rounded-2xl overflow-hidden border border-sand hover:border-sage-light transition-colors flex flex-col"
             >
-              <span className="text-2xl text-sage mb-5 block">{item.icon}</span>
-              <h3 className="font-serif text-bark text-xl mb-3">{item.title}</h3>
-              <p className="text-bark-light text-sm leading-relaxed">
-                {item.description}
-              </p>
+              <div className="relative w-full aspect-[4/3]">
+                <Image
+                  src={p.image}
+                  alt={p.imageAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+              </div>
+              <div className="p-8 flex flex-col flex-1">
+                <h3 className="font-serif text-bark text-2xl mb-2">
+                  {p.title}
+                </h3>
+                {p.price && (
+                  <p className="text-forest text-sm font-medium mb-4">
+                    {p.price}
+                  </p>
+                )}
+                <p className="text-bark-light text-sm leading-relaxed flex-1 mt-2">
+                  {p.description}
+                </p>
+                <a
+                  href={p.cta.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`mt-8 inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-medium transition-colors ${
+                    p.cta.primary
+                      ? "bg-forest text-cream hover:bg-forest-dark"
+                      : "border border-forest text-forest hover:bg-forest/5"
+                  }`}
+                >
+                  {p.cta.label}
+                </a>
+              </div>
             </div>
           ))}
         </div>

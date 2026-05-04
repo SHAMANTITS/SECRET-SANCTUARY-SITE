@@ -1,65 +1,92 @@
 import Image from "next/image";
 
+const CALENDLY_URL =
+  "https://calendly.com/thesecret-sanctuary/root-cause-reset-discovery-call";
+
 export default function MeetCyril() {
   return (
-    <section id="meet-cyril" className="bg-sand py-24 lg:py-32">
-      <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-        <div className="flex justify-center lg:justify-start">
-          <div className="relative w-72 lg:w-80">
-            <div className="rounded-3xl overflow-hidden aspect-[3/4]">
+    <section id="meet-cyril" className="bg-cream py-24 lg:py-32">
+      <div className="max-w-5xl mx-auto px-6 grid lg:grid-cols-[5fr_6fr] gap-12 lg:gap-20 items-center">
+        {/* Portrait */}
+        <div>
+          <div className="relative w-full max-w-sm mx-auto lg:max-w-none">
+            <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-[0_30px_60px_-30px_rgba(45,74,62,0.35)]">
               <Image
-                src="/cyril.png"
-                alt="Cyril, founder of The Secret Sanctuary"
-                width={640}
-                height={853}
-                className="w-full h-full object-cover"
-                priority
+                src="/cyrilmeet.png"
+                alt="Cyril Lim, founder and caretaker of The Secret Sanctuary"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 384px, 480px"
               />
             </div>
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl bg-forest/10 border border-sage-light/30" />
+            <div
+              aria-hidden="true"
+              className="hidden lg:block absolute -bottom-5 -right-5 w-28 h-28 rounded-2xl border border-sage-light/50 -z-0"
+            />
           </div>
+          <p className="mt-6 text-mist text-xs uppercase tracking-[0.22em] text-center lg:text-left">
+            Cyril Lim
+          </p>
         </div>
 
+        {/* Bio */}
         <div>
-          <p className="text-mist text-xs uppercase tracking-[0.2em] mb-4">
-            Meet Your Guide
-          </p>
-          <h2 className="font-serif text-bark text-4xl lg:text-5xl leading-tight mb-6">
-            Cyril
+          <div className="flex items-center gap-3 mb-4">
+            <span className="block w-8 h-px bg-sage" aria-hidden="true" />
+            <p className="text-mist text-xs uppercase tracking-[0.22em]">
+              Your Host
+            </p>
+          </div>
+
+          <h2 className="font-serif text-bark text-4xl lg:text-5xl leading-tight mb-3">
+            Meet Cyril
           </h2>
-          <p className="text-bark-light leading-relaxed mb-5">
-            Cyril guides people through a deeply personal, root-cause approach to
-            healing. His work is grounded, intuitive, and shaped by years of direct
-            experience with people facing chronic health struggles, emotional
-            exhaustion, and complex life patterns.
-          </p>
-          <p className="text-bark-light leading-relaxed mb-5">
-            He listens carefully, looks beneath the surface, and helps each person
-            reconnect with a more stable, clear, and aligned state — without rushing
-            to conclusions or defaulting to generic answers.
-          </p>
-          <p className="text-bark-light leading-relaxed mb-10">
-            A Discovery Call with Cyril is not a sales conversation. It's an honest
-            conversation about where you are, what you need, and whether The Secret
-            Sanctuary is the right place for you.
+          <p className="text-bark-light italic mb-8">
+            Founder &amp; Caretaker of The Secret Sanctuary
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          <p className="text-bark-light text-lg leading-relaxed mb-5">
+            Cyril Lim is the founder and living caretaker of The Secret
+            Sanctuary, a quiet sanctuary in Sarawak where nature, ancestral
+            wisdom, and a modern understanding of wellbeing meet.
+          </p>
+          <p className="text-bark-light leading-relaxed mb-5">
+            What began over 30 years ago as a personal garden, created out of
+            devotion to care for his mother, has slowly become a living
+            sanctuary. Today, people come here not only to rest, but to
+            reconnect with something deeper within themselves.
+          </p>
+          <p className="text-bark-light leading-relaxed mb-5">
+            Cyril does not position himself as a conventional healer or
+            teacher. His role is to hold space, listen deeply, and guide
+            guests back toward their own inner intelligence.
+          </p>
+          <p className="text-bark-light leading-relaxed mb-5">
+            Through herbal food, intuitive conversation, Qi-based healing,
+            Access Bars, and shared stillness, Cyril supports what he calls a
+            root-cause reset: a return to balance in body, mind, and spirit.
+          </p>
+          <p className="text-bark-light leading-relaxed">
+            Surrounded by medicinal herbs, fruit trees, water, and rainforest
+            energy, the sanctuary naturally slows the mind and softens the
+            body. Many guests describe it as 世外桃源 — a hidden paradise.
+          </p>
+
+          <blockquote className="mt-10 pl-6 border-l-2 border-sage">
+            <p className="font-serif text-bark text-xl lg:text-2xl leading-relaxed italic">
+              &ldquo;The sanctuary is not outside. It is something you remember
+              within.&rdquo;
+            </p>
+          </blockquote>
+
+          <div className="mt-10">
             <a
-              href="https://calendly.com/thesecret-sanctuary"
+              href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-forest text-cream px-8 py-4 rounded-full text-sm font-medium hover:bg-forest-dark transition-colors"
             >
-              Book a Discovery Call
-            </a>
-            <a
-              href="https://wa.me/60198888986"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center border border-forest text-forest px-8 py-4 rounded-full text-sm font-medium hover:bg-forest/5 transition-colors"
-            >
-              Message on WhatsApp
+              Talk to Cyril Online
             </a>
           </div>
         </div>

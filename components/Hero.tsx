@@ -1,6 +1,7 @@
 const CALENDLY_URL =
   "https://calendly.com/thesecret-sanctuary/root-cause-reset-discovery-call";
 const WHATSAPP_URL = "https://wa.me/60198888986";
+const COMPANY_PROFILE_URL = "https://exotictropicalgarden.netlify.app/";
 
 export default function Hero() {
   return (
@@ -68,6 +69,21 @@ export default function Hero() {
               className="inline-flex items-center justify-center border border-cream/60 text-cream px-8 py-4 rounded-full text-sm font-medium hover:bg-white/10 transition-colors"
             >
               Talk to Cyril Online
+            </a>
+          </div>
+
+          <div className="mt-10 flex flex-col items-center lg:items-end gap-3">
+            <p className="font-serif italic text-sage-light/80 text-sm sm:text-base">
+              Discover the wider vision behind The Secret Sanctuary.
+            </p>
+            <a
+              href={COMPANY_PROFILE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 border border-sage-light/50 text-sage-light px-6 py-3 rounded-full text-xs sm:text-sm font-medium tracking-wide uppercase hover:bg-sage-light/10 hover:text-cream transition-colors"
+            >
+              View Our Company Profile
+              <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </div>

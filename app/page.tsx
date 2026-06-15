@@ -11,6 +11,7 @@ import MeetCyril from "@/components/MeetCyril";
 import Inspiration from "@/components/Inspiration";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
+import MusicSection from "@/components/MusicSection";
 import SanctuaryJournal from "@/components/SanctuaryJournal";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -22,6 +23,7 @@ export default function Page() {
       <Header />
       <main>
         <Hero />
+        <MusicSection />
         <MiniGallery />
         <TheSanctuary />
         <WhatWeOffer />
